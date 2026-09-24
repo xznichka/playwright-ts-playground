@@ -1,0 +1,12 @@
+{
+  "id": 777,
+  "name": "My test product",
+  "price": "Rs. 999",
+  "brand": "Polo",
+  "category": {
+    "usertype": {
+      "usertype": "Women"
+    },
+    "category": "Tops"
+  }
+}
