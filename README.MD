@@ -14,12 +14,18 @@ Key Features
 The target site shows Google ads and pop-ups that cover page elements and make tests flaky. A custom fixture deals with this in two ways:
 
 Network level: page.route aborts requests to ad-related domains.
+
 DOM level: page.addInitScript injects a small script with a MutationObserver that removes pop-ups and iframes before they interfere with interactions. 3. Page Object Model
+
 Locators: all locators are readonly fields set in the page class constructor. Methods contain no hardcoded selectors.
-Assertions: page objects only read and prepare UI data (for example, item prices and quantities in the cart). All expect assertions stay in the test specs, so reports show clearly what is being checked. 4. Configuration
+
+Assertions: page objects only read and prepare UI data (for example, item prices and quantities in the cart). All expect assertions stay in the test specs, so reports show clearly what is being checked. 
+
+4. Configuration
 Base URL and credentials are read from a .env file (via dotenv).
 Tests run in Chromium, Firefox and WebKit with fullyParallel: true.
 Traces, screenshots and videos are saved when a test fails.
+
 Repository Structure
 ├── .env.example # Template for environment variables
 ├── .gitignore # Excludes secrets, reports and node_modules
